@@ -1,28 +1,19 @@
 module.exports = {
-  // Discord Bot Token - from Discord Developer Portal > Your App > Bot > Token
-  TOKEN: "",
-  
-  // Discord Application Client ID - from Discord Developer Portal > Your App > OAuth2
-  CLIENT_ID: "",
-  
-  // Discord Application Client Secret - from Discord Developer Portal > Your App > OAuth2
-  CLIENT_SECRET: "",
-  
-  // OAuth Redirect URI - your dashboard URL + /auth/callback
-  // Example: https://yourdomain.com/auth/callback
-  REDIRECT_URI: "http://ip:port/auth/callback",
-  
-  // Dashboard port
-  DASHBOARD_PORT: port,
-  
+  // Discord Bot Token
+  TOKEN: process.env.TOKEN,
+
+  // Discord Application Client ID
+  CLIENT_ID: process.env.CLIENT_ID,
+
+  // Discord Application Client Secret
+  CLIENT_SECRET: process.env.CLIENT_SECRET,
+
+  // OAuth Redirect URI (doit matcher EXACTEMENT Discord Dev Portal)
+  REDIRECT_URI: process.env.REDIRECT_URI,
+
+  // Dashboard port (Render fournit PORT automatiquement)
+  DASHBOARD_PORT: process.env.PORT || 3000,
+
   // Database folder path
   DATABASE_PATH: "./database"
 };
-
-/*
-: ! Aegis !
-    + Discord: itsfizys
-    + Portfolio: https://itsfiizys.com
-    + Community: https://discord.gg/8wfT8SfB5Z  (AeroX Development )
-    + for any queries reach out Community or DM me.
-*/
